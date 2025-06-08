@@ -1,1 +1,171 @@
-# official
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kaito Rei Official</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #012a4a;
+      color: #cce6ff;
+      min-height: 100vh;
+    }
+    header {
+      background: #023e8a;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px #00000044;
+    }
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 5px;
+      letter-spacing: 2px;
+    }
+    header .kana {
+      font-size: 1.2rem;
+      color: #90e0ef;
+    }
+    nav {
+      background: #014f86;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      gap: 30px;
+    }
+    nav a {
+      color: #cce6ff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+    nav a:hover, nav a.active {
+      color: #90e0ef;
+    }
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+      min-height: 80vh;
+    }
+    main section {
+      background: #023e8a;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #90e0ef55;
+    }
+    section h2 {
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+    section p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #012a4a;
+      color: #90e0efcc;
+      font-size: 0.9rem;
+    }
+    .social {
+      margin-top: 8px;
+    }
+    .social a {
+      margin: 0 10px;
+      color: #90e0ef;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kaito Rei</h1>
+    <div class="kana">カイトレイ</div>
+  </header>
+
+  <nav>
+    <a href="#" class="nav-link active" data-page="home">Home</a>
+    <a href="#" class="nav-link" data-page="profile">Profil</a>
+    <a href="#" class="nav-link" data-page="blog">Blog</a>
+    <a href="#" class="nav-link" data-page="contact">Contact</a>
+  </nav>
+
+  <main id="content">
+    <section id="home-section">
+      <h2>Selamat datang di situs resmi Kaito Rei</h2>
+      <p>Jelajahi dunia virtual dengan gaya santai tapi berkelas.</p>
+      <p>Kaito Rei hadir sebagai VTuber dengan persona yang kalem namun tetap karismatik. Di situs ini, kamu bisa mengikuti semua aktivitas, info terbaru, dan konten eksklusif dari Kaito. Website ini adalah rumah virtual untuk semua fans yang ingin lebih dekat dengan dunia Kaito, mulai dari informasi profil, blog rilis, hingga kontak langsung.</p>
+      <p>Gabung bareng komunitas yang solid dan dukung terus perjalanan Kaito di dunia digital! Stay chill, tetap berkelas.</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Kaito Rei • All rights reserved.
+    <div class="social">
+      <a href="https://tiktok.com/@ka1to.rei" target="_blank">TikTok</a> |
+      <a href="https://instagram.com/kaitorei_" target="_blank">Instagram</a> |
+      <a href="https://x.com/KaitoRei_" target="_blank">X</a> |
+      <a href="https://youtube.com/@Kaito_Rei" target="_blank">YouTube</a>
+    </div>
+  </footer>
+
+  <script>
+    const content = document.getElementById('content');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    const pages = {
+      home: `
+        <section id="home-section">
+          <h2>Selamat datang di situs resmi Kaito Rei</h2>
+          <p>Jelajahi dunia virtual dengan gaya santai tapi berkelas.</p>
+          <p>Kaito Rei hadir sebagai VTuber dengan persona yang kalem namun tetap karismatik. Di situs ini, kamu bisa mengikuti semua aktivitas, info terbaru, dan konten eksklusif dari Kaito. Website ini adalah rumah virtual untuk semua fans yang ingin lebih dekat dengan dunia Kaito, mulai dari informasi profil, blog rilis, hingga kontak langsung.</p>
+          <p>Gabung bareng komunitas yang solid dan dukung terus perjalanan Kaito di dunia digital! Stay chill, tetap berkelas.</p>
+        </section>`,
+      profile: `
+        <section id="profile-section">
+          <h2>Profil Kaito Rei</h2>
+          <p><strong>Tanggal Lahir:</strong> 19 Desember 2007</p>
+          <p><strong>Hobi:</strong> Sushi, Live streaming, Coding</p>
+          <p><strong>Slogan:</strong> Kaito Rei, santai tapi berkelas. Jelajahi dunia virtual dengan gaya keren.</p>
+          <p>Kaito Rei dikenal sebagai VTuber yang punya pendekatan chill namun tetap stylish. Lahir dengan semangat kreatif, Kaito mulai terjun ke dunia virtual untuk menyampaikan cerita, hiburan, dan koneksi yang bermakna. Dengan suara yang calming dan karakteristik yang kuat, dia menarik banyak penggemar yang merasa relate dan nyaman berinteraksi dengannya.</p>
+          <p>Di balik layar, Kaito juga aktif dalam dunia teknologi dan seni digital. Dia terus mengeksplorasi cara-cara baru untuk mengekspresikan dirinya melalui media virtual.</p>
+        </section>`,
+      blog: `
+        <section id="blog-section">
+          <h2>Blog Rilis Website</h2>
+          <p>Kaito Rei adalah sosok VTuber yang menghadirkan suasana tenang dan berkelas dalam dunia virtual. Website ini dibuat sebagai tempat resmi untuk update, streaming, dan interaksi dengan para penggemar.</p>
+          <p>Proses pengembangan situs ini penuh dedikasi, dari desain visual sampai pengalaman pengguna yang simple tapi efektif. Tujuannya satu: menciptakan tempat yang nyaman buat kamu mengenal Kaito lebih dekat dan update dengan semua kegiatannya.</p>
+          <p>Website ini rilis sebagai awal dari langkah besar ke depan. Nantikan konten-konten eksklusif, event virtual, dan banyak hal seru lainnya! Terima kasih sudah jadi bagian dari awal perjalanan ini.</p>
+        </section>`,
+      contact: `
+        <section id="contact-section">
+          <h2>Kontak</h2>
+          <p>Kalau mau kontak langsung, email aja ke: <a href="mailto:reiiii.kaito@gmail.com">reiiii.kaito@gmail.com</a></p>
+          <p>Kamu juga bisa reach out lewat media sosial resmi yang ada di bawah halaman ini. Baik buat keperluan kolaborasi, pertanyaan fans, atau sekadar sapa, semua pesan dari kamu sangat berarti.</p>
+          <p>Yuk, tetap terhubung dan terus dukung Kaito Rei dalam setiap langkah perjalanannya di dunia virtual!</p>
+        </section>`
+    };
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        navLinks.forEach(l => l.classList.remove('active'));
+        link.classList.add('active');
+        const page = link.getAttribute('data-page');
+        content.innerHTML = pages[page];
+      });
+    });
+  </script>
+
+</body>
+</html>
